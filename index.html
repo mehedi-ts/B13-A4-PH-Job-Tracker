@@ -4,9 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Job Tracker</title>
+    <!-- daisyui & tailwindcss -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body>
-    <header></header>
-    <main></main>
+  <body class="bg-[#F8FAFC] pt-14">
+    <header class="max-w-[1110px] mx-auto">
+      <h1 class="text-3xl font-bold text-black">Job Application Tracker</h1>
+      <div class="tracker-con flex items-center justify-between gap-4 mt-5">
+        <div class="total bg-white p-5 w-full rounded-lg">
+          <p class="text-base font-medium text-[#323B49]">Total</p>
+          <h2 class="text-black text-2xl font-bold">0</h2>
+        </div>
+        <div class="total bg-white p-5 w-full rounded-lg">
+          <p class="text-base font-medium text-[#323B49]">Total</p>
+          <h2 class="text-black text-2xl font-bold">0</h2>
+        </div>
+        <div class="total bg-white p-5 w-full rounded-lg">
+          <p class="text-base font-medium text-[#323B49]">Total</p>
+          <h2 class="text-black text-2xl font-bold">0</h2>
+        </div>
+      </div>
+    </header>
+    <div class="divider max-w-[1110px] mx-auto"></div>
+    <main class="max-w-[1110px] mx-auto">
+      <div class="section-title-con flex items-center justify-between">
+        <h3 class="text-xl font-semibold text-black">Available Jobs</h3>
+        <p class="text-base text-[#64748B] font-medium"><span>8</span> jobs</p>
+      </div>
+      <div class="all-jobs">
+        <div class="btns">
+          <button class="btn px-4 py-2 rounded border">All</button>
+          <button class="btn px-4 py-2 rounded border">Interview</button>
+          <button class="btn px-4 py-2 rounded border">Rejected</button>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
