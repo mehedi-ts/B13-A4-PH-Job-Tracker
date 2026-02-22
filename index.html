@@ -11,6 +11,14 @@
       type="text/css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body class="bg-[#F8FAFC] pt-14">
     <header class="max-w-[1110px] mx-auto">
@@ -18,31 +26,73 @@
       <div class="tracker-con flex items-center justify-between gap-4 mt-5">
         <div class="total bg-white p-5 w-full rounded-lg">
           <p class="text-base font-medium text-[#323B49]">Total</p>
-          <h2 class="text-black text-2xl font-bold">0</h2>
+          <h2 id="total-count" class="text-black text-2xl font-bold">0</h2>
         </div>
         <div class="total bg-white p-5 w-full rounded-lg">
-          <p class="text-base font-medium text-[#323B49]">Total</p>
-          <h2 class="text-black text-2xl font-bold">0</h2>
+          <p class="text-base font-medium text-[#323B49]">Interview</p>
+          <h2 id="interview-count" class="text-[green] text-2xl font-bold">
+            0
+          </h2>
         </div>
         <div class="total bg-white p-5 w-full rounded-lg">
-          <p class="text-base font-medium text-[#323B49]">Total</p>
-          <h2 class="text-black text-2xl font-bold">0</h2>
+          <p class="text-base font-medium text-[#323B49]">Rejected</p>
+          <h2 id="rejected-count" class="text-2xl font-bold text-[red]">0</h2>
         </div>
       </div>
     </header>
     <div class="divider max-w-[1110px] mx-auto"></div>
     <main class="max-w-[1110px] mx-auto">
-      <div class="section-title-con flex items-center justify-between">
+      <div class="section-title-con flex items-center justify-between mb-6">
         <h3 class="text-xl font-semibold text-black">Available Jobs</h3>
-        <p class="text-base text-[#64748B] font-medium"><span>8</span> jobs</p>
+        <p class="text-base text-[#64748B] font-medium">
+          <span id="total-jobs">0</span> jobs
+        </p>
       </div>
       <div class="all-jobs">
         <div class="btns">
-          <button class="btn px-4 py-2 rounded border">All</button>
-          <button class="btn px-4 py-2 rounded border">Interview</button>
-          <button class="btn px-4 py-2 rounded border">Rejected</button>
+          <button
+            class="btn px-4 py-2 rounded border text-sm font-medium text-[#64748B]"
+          >
+            All
+          </button>
+          <button
+            class="btn px-4 py-2 rounded border text-sm font-medium text-[#64748B]"
+          >
+            Interview
+          </button>
+          <button
+            class="btn px-4 py-2 rounded border text-sm font-medium text-[#64748B]"
+          >
+            Rejected
+          </button>
         </div>
+        <section
+          id="all-jobs-con"
+          class="all-jobs-con flex flex-col gap-4 mt-4"
+        >
+          <div class="w-full bg-white h-[300px] rounded-xl p-6">
+            <div class="sub-title flex items-center justify-between">
+              <div class="titles">
+                <h4 class="text-black text-[18px] font-semibold">
+                  Mobile First Corp
+                </h4>
+                <p class="text-base text-[#64748B]">React Native Developer</p>
+              </div>
+              <div
+                class="delete-btn flex items-center justify-center w-8 h-8 rounded-full p-2 border border-[#F1F2F4] text-[#64748B]"
+              >
+                <i class="fa-regular fa-trash-can w-4"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full bg-white h-[300px] rounded-xl">hello</div>
+          <div class="w-full bg-white h-[300px] rounded-xl">hello</div>
+        </section>
       </div>
     </main>
+    <script src="./script/data.js"></script>
+    <script src="./script/machine.js"></script>
+    <script src="./script/script.js"></script>
   </body>
 </html>
