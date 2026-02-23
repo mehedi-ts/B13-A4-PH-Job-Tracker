@@ -22,21 +22,27 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body class="bg-[#F8FAFC] pt-14 min-h-screen">
-    <header class="max-w-[1110px] mx-auto">
-      <h1 class="text-3xl font-bold text-black">Job Application Tracker</h1>
-      <div class="tracker-con flex items-center justify-between gap-4 mt-5">
-        <div class="bg-white p-5 w-full rounded-lg">
+  <body class="bg-[#F8FAFC] md:pt-14 pt-5 min-h-screen">
+    <header class="max-w-[1110px] mx-auto px-4 md:px-6 lg:px-8">
+      <h1
+        class="text-2xl text-center md:text-left md:text-3xl lg:text-3xl font-bold text-black"
+      >
+        Job Application Tracker
+      </h1>
+      <div
+        class="tracker-con flex items-center justify-between gap-2 md:gap-4 mt-5 md:mt-5"
+      >
+        <div class="bg-white p-2 md:p-5 w-full rounded-lg">
           <p class="text-base font-medium text-[#323B49]">Total</p>
           <h2 id="total-count" class="text-black text-2xl font-bold">0</h2>
         </div>
-        <div class="bg-white p-5 w-full rounded-lg">
+        <div class="bg-white p-2 md:p-5 w-full rounded-lg">
           <p class="text-base font-medium text-[#323B49]">Interview</p>
           <h2 id="interview-count" class="text-[green] text-2xl font-bold">
             0
           </h2>
         </div>
-        <div class="bg-white p-5 w-full rounded-lg">
+        <div class="bg-white p-2 md:p-5 w-full rounded-lg">
           <p class="text-base font-medium text-[#323B49]">Rejected</p>
           <h2 id="rejected-count" class="text-2xl font-bold text-[red]">0</h2>
         </div>
@@ -44,7 +50,7 @@
     </header>
 
     <div class="divider max-w-[1110px] mx-auto"></div>
-    <main class="max-w-[1110px] mx-auto">
+    <main class="max-w-[1110px] mx-auto px-4 md:px-6 lg:px-8">
       <div class="section-title-con flex items-center justify-between mb-6">
         <h3 class="text-xl font-semibold text-black">Available Jobs</h3>
         <p class="text-base text-[#64748B] font-medium">
