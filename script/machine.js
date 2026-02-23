@@ -1,15 +1,24 @@
-console.log("machine conected.");
+// function for category click
 function bntHandle(index, status) {
   jobs[index].status = status;
   renderjobs(curentFilter);
 }
+// function for delete btn click
 function deleteJob(index) {
   jobs.splice(index, 1);
   renderjobs(curentFilter);
 }
-function updateCount() {
+// function for update cuount state
+function updateCount(filter) {
+  let filterJOb = jobs;
+  if (filter !== "all") {
+    filterJOb = jobs.filter((j) => {
+      return j.status === filter;
+    });
+  }
+  totalJobsEl.innerText = filterJOb.length;
+
   totalEl.innerText = jobs.length;
-  totalJobsEl.innerText = jobs.length;
   interviewEl.innerText = jobs.filter((j) => {
     return j.status === "Interview";
   }).length;
@@ -17,6 +26,7 @@ function updateCount() {
     return j.status === "Rejected";
   }).length;
 }
+// function for main job rendar.
 function renderjobs(filter = "all") {
   curentFilter = filter;
   container.innerHTML = "";
@@ -36,7 +46,7 @@ function renderjobs(filter = "all") {
               Check back soon for new job opportunities
             </p>
           </div>`;
-    updateCount();
+    updateCount(filter);
     return;
   }
 
@@ -84,8 +94,7 @@ function renderjobs(filter = "all") {
                 >${job.status}</span
               >
               <p class="text-[#323B49] text-sm mt-4">
-                Build cross-platform mobile applications using React Native.
-                Work on products used by millions of users worldwide.
+                ${job.description}
               </p>
             </div>
             <div class="cart-btn flex gap-2">
@@ -106,5 +115,5 @@ function renderjobs(filter = "all") {
     `;
     container.appendChild(div);
   });
-  updateCount();
+  updateCount(filter);
 }
