@@ -26,6 +26,19 @@ function renderjobs(filter = "all") {
     }
     return job.status === filter;
   });
+  if (filterJob.length === 0) {
+    container.innerHTML = `<div class="flex px-10 py-14 bg-white w-full rounded-xl items-center justify-center flex-col">
+            <img src="./assets/jobs.png" alt="" />
+            <h1 class="mt-5 mb-2 text-2xl font-semibold text-black">
+              No jobs available
+            </h1>
+            <p class="text-base text-[#64748B]">
+              Check back soon for new job opportunities
+            </p>
+          </div>`;
+    updateCount();
+    return;
+  }
 
   filterJob.forEach((job, index) => {
     const mainDataIndex = jobs.indexOf(job);
@@ -49,11 +62,12 @@ function renderjobs(filter = "all") {
                 </h4>
                 <p class="text-base text-[#64748B]">${job.position}</p>
               </div>
-              <div onclick="deleteJob(${mainDataIndex})"
-                class="delete-btn flex items-center justify-center w-8 h-8 rounded-full p-2 border border-[#F1F2F4] text-[#64748B]"
-              >
-                <i class="fa-regular fa-trash-can w-4"></i>
-              </div>
+              <div
+      onclick="deleteJob(${mainDataIndex})"
+      class="delete-btn hover:bg-[#b1b2b4c3] hover:text-white transition-all duration-300 cursor-pointer flex items-center justify-center w-8 h-8 rounded-full p-2 border border-[#F1F2F4] text-[#64748B]"
+    >
+      <i class="fa-regular fa-trash-can w-4"></i>
+    </div>
             </div>
             <div
               class="flex items-center justify-start gap-3 text-sm text-[#64748B]"
