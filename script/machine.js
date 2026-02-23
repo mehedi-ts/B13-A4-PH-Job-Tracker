@@ -27,7 +27,7 @@ function renderjobs(filter = "all") {
     return job.status === filter;
   });
   if (filterJob.length === 0) {
-    container.innerHTML = `<div class="flex px-10 py-14 bg-white w-full rounded-xl items-center justify-center flex-col">
+    container.innerHTML = `<div class=" text-center flex px-10 py-14 bg-white w-full rounded-xl items-center justify-center flex-col">
             <img src="./assets/jobs.png" alt="" />
             <h1 class="mt-5 mb-2 text-2xl font-semibold text-black">
               No jobs available
