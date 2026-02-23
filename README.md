@@ -5,7 +5,7 @@
 
 ## 2. How do you create and insert a new element into the DOM?
 
-### first select a container element .then create a new element with document.createElement() , add contaent or attributes and  insert it into the container using appendChild().
+### Ans: first select a container element .then create a new element with document.createElement() , add contaent or attributes and  insert it into the container using appendChild().
 
 ## 3. What is Event Bubbling? And how does it work?
 
