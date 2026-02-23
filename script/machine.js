@@ -62,6 +62,9 @@ function renderjobs(filter = "all") {
       "flex",
       "flex-col",
       "gap-5",
+      "border",
+      "border-gray-300",
+      "md:border-0",
     );
     div.innerHTML = `
     
