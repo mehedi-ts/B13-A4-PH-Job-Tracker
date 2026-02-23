@@ -1,9 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html class="overflow-y-scroll" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Job Tracker</title>
+    <!-- css  -->
+    <link rel="stylesheet" href="./styles/style.css" />
     <!-- daisyui & tailwindcss -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
@@ -24,17 +26,17 @@
     <header class="max-w-[1110px] mx-auto">
       <h1 class="text-3xl font-bold text-black">Job Application Tracker</h1>
       <div class="tracker-con flex items-center justify-between gap-4 mt-5">
-        <div class="total bg-white p-5 w-full rounded-lg">
+        <div class="bg-white p-5 w-full rounded-lg">
           <p class="text-base font-medium text-[#323B49]">Total</p>
           <h2 id="total-count" class="text-black text-2xl font-bold">0</h2>
         </div>
-        <div class="total bg-white p-5 w-full rounded-lg">
+        <div class="bg-white p-5 w-full rounded-lg">
           <p class="text-base font-medium text-[#323B49]">Interview</p>
           <h2 id="interview-count" class="text-[green] text-2xl font-bold">
             0
           </h2>
         </div>
-        <div class="total bg-white p-5 w-full rounded-lg">
+        <div class="bg-white p-5 w-full rounded-lg">
           <p class="text-base font-medium text-[#323B49]">Rejected</p>
           <h2 id="rejected-count" class="text-2xl font-bold text-[red]">0</h2>
         </div>
@@ -51,77 +53,28 @@
       <div class="all-jobs">
         <div class="btns">
           <button
-            class="btn px-4 py-2 rounded border text-sm font-medium text-[#64748B]"
+            id="category-all"
+            class="active category btn px-4 py-2 rounded border text-sm font-medium text-[#64748B]"
           >
             All
           </button>
           <button
-            class="btn px-4 py-2 rounded border text-sm font-medium text-[#64748B]"
+            id="category-interview"
+            class="category btn px-4 py-2 rounded border text-sm font-medium text-[#64748B]"
           >
             Interview
           </button>
           <button
-            class="btn px-4 py-2 rounded border text-sm font-medium text-[#64748B]"
+            id="category-rejected"
+            class="category btn px-4 py-2 rounded border text-sm font-medium text-[#64748B]"
           >
             Rejected
           </button>
         </div>
         <section
           id="all-jobs-con"
-          class="all-jobs-con flex flex-col gap-4 mt-4"
-        >
-          <div class="w-full bg-white rounded-xl p-6 flex flex-col gap-5">
-            <div class="sub-title flex items-center justify-between">
-              <div class="titles">
-                <h4 class="text-black text-[18px] font-semibold">
-                  Mobile First Corp
-                </h4>
-                <p class="text-base text-[#64748B]">React Native Developer</p>
-              </div>
-              <div
-                class="delete-btn flex items-center justify-center w-8 h-8 rounded-full p-2 border border-[#F1F2F4] text-[#64748B]"
-              >
-                <i class="fa-regular fa-trash-can w-4"></i>
-              </div>
-            </div>
-            <div
-              class="flex items-center justify-start gap-3 text-sm text-[#64748B]"
-            >
-              <p>Remote</p>
-              <p><i class="fa-solid fa-circle text-[7px]"></i></p>
-              <p>Full-time</p>
-              <p><i class="fa-solid fa-circle text-[7px]"></i></p>
-              <p>$130,000 - $175,000</p>
-            </div>
-            <div>
-              <span
-                class="bg-[#EEF4FF] px-3 py-2 text-black text-sm font-medium rounded-[4px]"
-                >Not Applied</span
-              >
-              <p class="text-[#323B49] text-sm mt-4">
-                Build cross-platform mobile applications using React Native.
-                Work on products used by millions of users worldwide.
-              </p>
-            </div>
-            <dvi class="cart-btn flex gap-2">
-              <button
-                onclick="bntHandle(index, 'interview')"
-                class="btn btn-outline btn-success text-sm font-semibold"
-              >
-                interview
-              </button>
-              <button
-                onclick="bntHandle(index, 'interview')"
-                class="btn btn-outline btn-error text-sm font-semibold"
-              >
-                interview
-              </button>
-            </dvi>
-          </div>
-
-          <div class="w-full bg-white h-[300px] rounded-xl">hello</div>
-          <div class="w-full bg-white h-[300px] rounded-xl">hello</div>
-        </section>
+          class="all-jobs-con grid grid-cols-1 gap-4 mt-4 min-h-[500px]"
+        ></section>
       </div>
     </main>
     <script src="./script/data.js"></script>

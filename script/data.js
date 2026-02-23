@@ -6,7 +6,7 @@ const jobs = [
     location: "Remote",
     type: "Full-time",
     salary: "$120,000 - $150,000",
-    status: "all",
+    status: "Not Applied",
   },
   {
     companyName: "Facebook",
@@ -30,7 +30,7 @@ const jobs = [
     location: "Redmond, WA",
     type: "Full-time",
     salary: "$90,000 - $120,000",
-    status: "all",
+    status: "Not Applied",
   },
   {
     companyName: "Netflix",
@@ -54,7 +54,7 @@ const jobs = [
     location: "Cupertino, CA",
     type: "Full-time",
     salary: "$130,000 - $145,000",
-    status: "all",
+    status: "Not Applied",
   },
   {
     companyName: "Spotify",
